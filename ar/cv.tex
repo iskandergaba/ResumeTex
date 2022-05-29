@@ -1,0 +1,151 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+
+\usepackage[english,
+            bidi=basic, 
+            headfoot=arabic,
+            layout=counters.tabular]{babel}        
+\babelprovide[import, main,
+            justification=kashida,
+            transforms = kashida.plain]{arabic}
+
+\usepackage{fontspec}
+\babelfont[english]{rm}
+          [Ligatures=Common, Language=Default]{NewComputerModern}
+\babelfont[arabic]{rm}
+          [Language=Default]{UKIJ_TUZ}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=green,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={السيرة الذاتية},
+    %pdfpagemode=FullScreen,
+}
+
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+%==== DEFINITIONS FOR RESUME ====%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1} #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+%==== END RESUME DEFINITIONS ====%
+
+\begin{document}
+\vspace*{-40pt}
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\input{./0-profile/default}
+
+%==== Education ====%
+\header{التعليم}
+\input{./1-education/1-scranton-uni/default}
+
+%==== Experience ====%
+\header{الخبرات}
+\vspace{1mm}
+
+\input{./2-experience/2013-05-dunder-manager/short}
+
+\input{./2-experience/2008-03-dunder-assist/short}
+
+\input{./2-experience/2008-03-staples-assoc/short}
+
+\input{./2-experience/2005-03-dunder-assist/short}
+
+%==== Skills ====%
+\header{المهارات}
+\begin{tabular}{l p{0.8\linewidth}}
+    \input{./3-skills/1-traits/default}
+    \input{./3-skills/2-talents/default}
+\end{tabular}
+\vspace{2mm}
+
+%==== Languages ====%
+\header{اللغات}
+\begin{tabular}{l p{0.75\linewidth}}
+    \input{./4-languages/1-english/default}
+    \input{./4-languages/2-german/default}
+    \input{./4-languages/3-dothraki/default}
+\end{tabular}
+\vspace{2mm}
+
+%==== Projects ====%
+\header{المشاريع}
+\input{./5-projects/1-schrute-farms/short}
+
+\input{./5-projects/2-schrute-gym/short}
+
+\input{./5-projects/3-sesame-daycare/short}
+
+%==== Publications ====%
+\header{المنشورات الأكادمية}
+\input{./6-publications/2009-06-watercooler-info/long}
+
+%==== Honors and Awards ====%
+\header{الجوائز والمِنح}
+\input{./7-honors-awards/2010-dundie/short}
+
+\input{./7-honors-awards/2005-salesman-month/short}
+
+
+\end{document}
