@@ -13,11 +13,9 @@
             transforms = kashida.plain]{arabic}
 
 \usepackage{fontspec}
-\babelfont[english]{rm}
-          [Ligatures=Common, Language=Default]{NewComputerModern}
 \babelfont[arabic]{rm}
-          %[Language=Default]{Amiri}
-          [Language=Default]{UKIJ_TUZ}
+          [Language=Default]{Amiri}
+          %[Language=Default]{Lateef}
           %[Language=Default]{IBM Plex Sans Arabic}
 
 \usepackage{hyperref}
@@ -104,39 +102,30 @@
 
 %==== Experience ====%
 \header{الخبرات}
-\vspace{1mm}
-
 \input{./2-experience/2013-05-dunder-manager/short}
-
 \input{./2-experience/2008-03-dunder-assist/short}
-
 \input{./2-experience/2008-03-staples-assoc/short}
-
 \input{./2-experience/2005-03-dunder-assist/short}
 
 %==== Skills ====%
 \header{المهارات}
 \begin{tabular}{l p{0.8\linewidth}}
-    \input{./3-skills/1-traits/default}
+    \input{./3-skills/1-traits/default}\\
     \input{./3-skills/2-talents/default}
 \end{tabular}
-\vspace{2mm}
 
 %==== Languages ====%
 \header{اللغات}
 \begin{tabular}{l p{0.75\linewidth}}
-    \input{./4-languages/1-english/default}
-    \input{./4-languages/2-german/default}
+    \input{./4-languages/1-english/default}\\
+    \input{./4-languages/2-german/default}\\
     \input{./4-languages/3-dothraki/default}
 \end{tabular}
-\vspace{2mm}
 
 %==== Projects ====%
 \header{المشاريع}
 \input{./5-projects/1-schrute-farms/short}
-
 \input{./5-projects/2-schrute-gym/short}
-
 \input{./5-projects/3-sesame-daycare/short}
 
 %==== Publications ====%
@@ -146,8 +135,6 @@
 %==== Honors and Awards ====%
 \header{الجوائز والمِنح}
 \input{./7-honors-awards/2010-dundie/short}
-
 \input{./7-honors-awards/2005-salesman-month/short}
-
 
 \end{document}
