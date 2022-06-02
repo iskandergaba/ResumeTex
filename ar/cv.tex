@@ -5,18 +5,18 @@
 \usepackage{textcomp}
 
 \usepackage[english,
-            bidi=basic, 
+            bidi=basic,
             headfoot=arabic,
             layout=counters.tabular]{babel}        
 \babelprovide[import, main,
             justification=kashida,
-            transforms = kashida.plain]{arabic}
+            transforms = kashida.plain
+            ]{arabic}
 
 \usepackage{fontspec}
+\setmainfont[Scale=0.8, Ligatures=TeX]{LatinModernRoman}
 \babelfont[arabic]{rm}
-          [Language=Default]{Amiri}
-          %[Language=Default]{Lateef}
-          %[Language=Default]{IBM Plex Sans Arabic}
+          [Scale=0.8, Language=Default]{Amiri}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -31,9 +31,6 @@
 \textheight=10in
 \pagestyle{empty}
 \raggedright
-
-%\renewcommand{\encodingdefault}{cg}
-%\renewcommand{\rmdefault}{lgrcmr}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
@@ -103,7 +100,7 @@
 %==== Experience ====%
 \header{الخبرات}
 \input{./2-experience/2013-05-dunder-manager/short}
-\input{./2-experience/2008-03-dunder-assist/short}
+\input{./2-experience/2010-03-dunder-assist/short}
 \input{./2-experience/2008-03-staples-assoc/short}
 \input{./2-experience/2005-03-dunder-assist/short}
 
