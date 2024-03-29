@@ -1,12 +1,4 @@
-# Resumake Template 1
-> LaTeX code generated at [resumake.io](https://resumake.io)
+# ResumeTex
+ResumeTex is a modular and a multilingual LaTeX CV template for making application tailored CVs on the fly.
 
-## Usage
-To generate a PDF from this LaTeX code, navigate to this folder in a terminal and run:
-
-    pdflatex resume.tex
-
-## Requirements
-You will need to have `pdflatex` installed on your machine.
-
-Alternatively, you can use a site like [ShareLaTeX](https://sharelatex.com) to build and edit your LaTeX instead.
+You can find all the details [here](https://iskandergaba.github.io/2022/06/16/resumetex.html).
