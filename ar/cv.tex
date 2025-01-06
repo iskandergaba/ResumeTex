@@ -7,6 +7,11 @@
 \usepackage{adjustbox}
 \usepackage{tikz}
 
+% No page numbering and more text space
+\textheight=10in
+\pagestyle{empty}
+
+% Arabic-specific configuration
 \usepackage[english,
             bidi=basic,
             headfoot=arabic,
@@ -14,12 +19,15 @@
 \babelprovide[import, main,
             justification=kashida,
             transforms = kashida.plain]{arabic}
-
 \usepackage{fontspec}
-\setmainfont[Scale=0.8, Ligatures=TeX]{LatinModernRoman}
-\babelfont[arabic]{rm}
-          [Scale=0.8, Language=Default]{Amiri}
+\setmainfont[Ligatures=TeX]{LatinModernRoman}
+\babelfont[arabic]{rm}[Language=Default]{Amiri}
+\defaultfontfeatures{Renderer=Harfbuzz}
 
+% RTL-LTR compatibility configuration
+\raggedright
+
+% PDF file configuraton
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -27,12 +35,7 @@
     filecolor=magenta,
     urlcolor=blue,
     pdftitle={السيرة الذاتية},
-    %pdfpagemode=FullScreen,
 }
-
-\textheight=10in
-\pagestyle{empty}
-\raggedright
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
@@ -51,7 +54,7 @@
 }
 
 \newcommand{\header} [1] {
-    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    {\hspace*{-18pt}\vspace*{8pt} \textsc{#1}}
     \vspace*{-6pt} \lineunder
 }
 
@@ -90,10 +93,8 @@
 \begin{document}
 \vspace*{-40pt}
 
-
 %==== Profile ====%
 \vspace*{-10pt}
-%\input{./0-profile/default-avatar}
 \input{./0-profile/default}
 
 %==== Education ====%
@@ -110,16 +111,16 @@
 %==== Skills ====%
 \header{المهارات}
 \begin{tabular}{l p{0.8\linewidth}}
-    \input{./3-skills/1-traits/default}\\
-    \input{./3-skills/2-talents/default}
+    \textbf{السمات:} & \input{./3-skills/1-traits/default}\\
+    \textbf{المواهب:} & \input{./3-skills/2-talents/default}
 \end{tabular}
 
 %==== Languages ====%
 \header{اللغات}
-\begin{tabular}{l p{0.75\linewidth}}
-    \input{./4-languages/1-english/default}\\
-    \input{./4-languages/2-german/default}\\
-    \input{./4-languages/3-dothraki/default}
+\begin{tabular}{l p{0.8\linewidth}}
+    \textbf{الإنجليزية:} & \input{./4-languages/1-english/default}\\
+    \textbf{الألمانية:} & \input{./4-languages/2-german/default}\\
+    \textbf{الدوثراكية:} & \input{./4-languages/3-dothraki/default}
 \end{tabular}
 
 %==== Projects ====%
