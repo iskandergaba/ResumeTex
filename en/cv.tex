@@ -1,28 +1,31 @@
 \documentclass[a4paper]{article}
-\usepackage{fullpage}
+
+\usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{makecell}
-\usepackage{adjustbox}
-\usepackage{tikz}
+\usepackage{fullpage}
 \usepackage{textcomp}
-\usepackage[T1]{fontenc}
-\textheight=10in
-\pagestyle{empty}
-\raggedright
-
+\usepackage{makecell}
 \usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage[T1]{fontenc}
+
+% PDF file configuration
 \hypersetup{
-    colorlinks=true,
-    linkcolor=green,
-    filecolor=magenta,      
-    urlcolor=blue,
-    pdftitle={CV},
-    %pdfpagemode=FullScreen,
+	colorlinks=true,
+	linkcolor=green,
+	filecolor=magenta,
+	urlcolor=blue,
+	pdftitle={Resume},
+	%pdfpagemode=FullScreen,
 }
 
-%\renewcommand{\encodingdefault}{cg}
-%\renewcommand{\rmdefault}{lgrcmr}
+% No page numbering and more text space
+\textheight=10in
+\pagestyle{empty}
+
+% RTL-LTR compatibility configuration
+\raggedright
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 

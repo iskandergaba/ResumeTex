@@ -1,15 +1,31 @@
 \documentclass[a4paper]{article}
-\usepackage{fullpage}
+
+\usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{fullpage}
 \usepackage{textcomp}
 \usepackage{makecell}
+\usepackage{hyperref}
 \usepackage{adjustbox}
-\usepackage{tikz}
+\usepackage[T1]{fontenc}
+
+% PDF file configuration
+\hypersetup{
+	colorlinks=true,
+	linkcolor=green,
+	filecolor=magenta,
+	urlcolor=blue,
+    pdftitle={السيرة الذاتية},
+	%pdfpagemode=FullScreen,
+}
 
 % No page numbering and more text space
 \textheight=10in
 \pagestyle{empty}
+
+% RTL-LTR compatibility configuration
+\raggedright
 
 % Arabic-specific configuration
 \usepackage[english,
@@ -23,19 +39,6 @@
 \setmainfont[Ligatures=TeX]{LatinModernRoman}
 \babelfont[arabic]{rm}[Language=Default]{Amiri}
 \defaultfontfeatures{Renderer=Harfbuzz}
-
-% RTL-LTR compatibility configuration
-\raggedright
-
-% PDF file configuraton
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=green,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={السيرة الذاتية},
-}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
