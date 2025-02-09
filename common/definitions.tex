@@ -5,14 +5,24 @@
     \end{verse}
 }
 
+% \lineunder command
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
     \hspace*{-18pt} \hrulefill \\
 }
 
+% \header command
+% #1: Header title
 \newcommand{\header} [1] {
-    {\hspace*{-18pt}\vspace*{8pt} \textsc{#1}}
-    \vspace*{-6pt} \lineunder
+    \hspace{-18pt} \vspace{4pt} \text{#1}
+    \lineunder
+}
+
+% \headersc command (same as \header but with small caps)
+% #1: Header title
+\newcommand{\headersc} [1] {
+	\hspace{-18pt} \vspace{4pt} \textsc{#1}
+	\lineunder
 }
 
 \newcommand{\employer} [3] {
@@ -41,13 +51,13 @@
 }
 
 
-% School command
+% \school command
 % #1: School name
 % #2: School location
 % #3: School degree
 % #4: School years
 \newcommand{\school} [4] {
-	\textbf{#1}\hfill #2\\
+	\textbf{#1} \hfill #2\\
 	#3 \hfill #4\\
 	\vspace{2mm}
 }
