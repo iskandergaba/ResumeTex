@@ -15,18 +15,8 @@
 	pdftitle=السيرة الذاتية,
 }
 
-% Arabic-specific configuration
-\usepackage[english,
-            bidi=basic,
-            headfoot=arabic,
-            layout=counters.tabular]{babel}        
-\babelprovide[import, main,
-            justification=kashida,
-            transforms = kashida.plain]{arabic}
-\usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{LatinModernRoman}
-\babelfont[arabic]{rm}[Language=Default]{Amiri}
-\defaultfontfeatures{Renderer=Harfbuzz}
+% Language-specific configuration
+\input{./conf}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
