@@ -4,11 +4,14 @@
 % Common dependencies
 \input{../common/dependencies}
 
+% Common defintions
+\input{../common/definitions}
+
 % Common configuration
 \input{../common/config}
 
-% Common defintions
-\input{../common/definitions}
+% Language-specific configuration
+\input{conf/default}
 
 % PDF file title
 \hypersetup{
@@ -22,25 +25,25 @@
 
 %==== Profile ====%
 \vspace*{-10pt}
-\input{./0-profile/default}
+\input{0-profile/default}
 
 %==== Education ====%
 \header{Education}
-\input{./1-education/1-scranton-uni/default}
+\input{1-education/1-scranton-uni/default}
 
 %==== Experience ====%
 \header{Experience}
-\input{./2-experience/2013-05-dunder-manager/long}
-\input{./2-experience/2010-03-dunder-assist/short}
-\input{./2-experience/2008-03-staples-assoc/short}
-\input{./2-experience/2005-03-dunder-assist/short}
+\input{2-experience/2013-05-dunder-manager/long}
+\input{2-experience/2010-03-dunder-assist/short}
+\input{2-experience/2008-03-staples-assoc/short}
+\input{2-experience/2005-03-dunder-assist/short}
 
 %==== Skills ====%
 \header{Skills}
 \vspace{1mm}
 \begin{tabular}{l p{0.8\linewidth}}
-    \textbf{Traits:} & \input{./3-skills/1-traits/default}\\
-    \textbf{Talents:} & \input{./3-skills/2-talents/default}
+    \textbf{Traits:} & \input{3-skills/1-traits/default}\\
+    \textbf{Talents:} & \input{3-skills/2-talents/default}
 \end{tabular}
 \vspace*{8pt}
 
@@ -48,25 +51,25 @@
 \header{Languages}
 \vspace{1mm}
 \begin{tabular}{l p{0.8\linewidth}}
-	\textbf{English:} & \input{./4-languages/1-english/default}\\
-    \textbf{German:} & \input{./4-languages/2-german/default}\\
-    \textbf{Dothraki:} & \input{./4-languages/3-dothraki/default}
+	\textbf{English:} & \input{4-languages/1-english/default}\\
+    \textbf{German:} & \input{4-languages/2-german/default}\\
+    \textbf{Dothraki:} & \input{4-languages/3-dothraki/default}
 \end{tabular}
 \vspace*{8pt}
 
 %==== Projects ====%
 \header{Projects}
-\input{./5-projects/1-schrute-farms/short}
-\input{./5-projects/2-schrute-gym/short}
-\input{./5-projects/3-sesame-daycare/short}
+\input{5-projects/1-schrute-farms/short}
+\input{5-projects/2-schrute-gym/short}
+\input{5-projects/3-sesame-daycare/short}
 
 %==== Publications ====%
 %\header{Publications}
-%\input{./6-publications/2009-06-watercooler-info/long}
+%\input{6-publications/2009-06-watercooler-info/long}
 
 %==== Honors and Awards ====%
 \header{Honors and Awards}
-\input{./7-honors-awards/2010-dundie/short}
-\input{./7-honors-awards/2005-salesman-month/short}
+\input{7-honors-awards/2010-dundie/short}
+\input{7-honors-awards/2005-salesman-month/short}
 
 \end{document}
