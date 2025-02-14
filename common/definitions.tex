@@ -11,6 +11,29 @@
     \hspace*{-18pt} \hrulefill \\
 }
 
+% \name command
+% #1: Name
+\newcommand{\name}[1] {
+	{\Huge #1}
+}
+
+% \namesc command (same as \name but with small caps)
+% #1: Name
+\newcommand{\namesc}[1] {
+	{\Huge \scshape{#1}}
+}
+
+% \photo command
+% #1: Photo file path
+\newcommand{\photo}[1] {
+	\begin{adjustbox}{width=3.5cm, valign=m, keepaspectratio}
+		\begin{tikzpicture}
+			\clip (1.75cm, 1.75cm) circle(1.75cm);
+			\includegraphics[width=3.5cm]{#1};
+		\end{tikzpicture}
+	\end{adjustbox}
+}
+
 % \header command
 % #1: Header title
 \newcommand{\header} [1] {
