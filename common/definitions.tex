@@ -7,8 +7,8 @@
 
 % \lineunder command
 \newcommand{\lineunder} {
-    \vspace*{-8pt} \\
-    \hspace*{-18pt} \hrulefill \\
+    \vspace{-8pt} \\
+    \hspace{-18pt} \hrulefill \\
 }
 
 % \name command
@@ -20,7 +20,7 @@
 % \namesc command (same as \name but with small caps)
 % #1: Name
 \newcommand{\namesc}[1] {
-	{\Huge \scshape{#1}}
+	\name{\scshape{#1}}
 }
 
 % \photo command
@@ -36,16 +36,21 @@
 
 % \header command
 % #1: Header title
-\newcommand{\header} [1] {
-    \hspace{-18pt} \vspace{4pt} \text{#1}
-    \lineunder
+\newcommand{\header}[1] {
+    \hspace{-18pt} \vspace{4pt} #1 \lineunder \vspace{4pt}
 }
 
 % \headersc command (same as \header but with small caps)
 % #1: Header title
-\newcommand{\headersc} [1] {
-	\hspace{-18pt} \vspace{4pt} \textsc{#1}
-	\lineunder
+\newcommand{\headersc}[1] {
+	\header{\textsc{#1}}
+}
+
+% \keyvalpair command
+% #1: Key
+% #2: Value
+\newcommand{\keyvalpair}[2] {
+	\textbf{#1:} & #2
 }
 
 \newcommand{\employer} [3] {
@@ -59,6 +64,12 @@
         #2 \\ #3
     \end{center}
     \vspace*{-8pt}
+}
+
+% keyvaltable environment
+\newenvironment{keyvaltable}{
+	\begin{tabular}{l p{0.8\linewidth}}}{
+	\end{tabular}
 }
 
 \newenvironment{achievements}{
